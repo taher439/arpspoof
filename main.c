@@ -49,7 +49,7 @@ int main(int argc, char * argv[])
   u_int32_t my_ip = get_src_ip(l1);
   my_mac = get_src_mac(l1);
 
-  memset(errbuf, 0, sizeof(errbuf));
+  memset(errbuf, 0, strlen(errbuf));
   target_ip = inet_addr(argv[1]);
 
   #pragma omp parallel sections num_threads(2) 
